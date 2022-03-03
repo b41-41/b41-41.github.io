@@ -20,15 +20,15 @@ categories: TIL JavaScript TDD Jest
 
 # Jest Unit Test
 
-## 고작하기
+## 사용하기
 
-- 설치
+### 설치
 
 ```
 npm install --save-dev jest
 ```
 
-- 계산을 위한 sum.js라는 파일 생성
+### 계산을 위한 sum.js라는 파일 생성
 
 ```JavaScrip처
 function sum(a, b) {
@@ -37,7 +37,7 @@ function sum(a, b) {
 module.exports = sum;
 ```
 
-- 테스트 파일 작성
+### 테스트 파일 작성
 
 ```JavaScript
 //sum.test.js
