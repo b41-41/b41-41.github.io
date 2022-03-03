@@ -6,7 +6,7 @@ categories: TIL HTML JavaScript TypeScript
 
 ## 들어가기
 
-```TypeScript
+```
 <M.MUITableRow
       hover={hover}
       {...(stickyTop !== undefined && {
@@ -41,7 +41,7 @@ categories: TIL HTML JavaScript TypeScript
 
 - 우측에 생성자 함수의 prototype에 바인딩된 객체가 좌측 객체의 프로토타입 체인 상에 존재하면 true로 평가됨.
 
-```TypeScript
+```
 if (event.target instanceof HTMLElement) {
           console.log(event.target.nodeName);
         }
@@ -56,7 +56,7 @@ if (event.target instanceof HTMLElement) {
 - 타입 단언은 `<Element>event.target`의 형식으로도 사용할 수 있음.
   - 하지만 이 상황에서는 tsx의 태그 문법과 비슷해서 헛갈릴 수가 있다.
 
-```TypeScript
+```
 console.log((event.target as Element).nodeName);
 ```
 
@@ -79,7 +79,7 @@ console.log((event.target as Element).nodeName);
 - `HTMLElement`는 HTML요소의 베이스 역할을 하는 클래스
 - 여기에서 언급한 것 이외에도 많은 클래스들이 있음.
 
-```JavaScript
+```
 alert( document.body instanceof HTMLBodyElement ); // true
 alert( document.body instanceof HTMLElement ); // true
 alert( document.body instanceof Element ); // true
