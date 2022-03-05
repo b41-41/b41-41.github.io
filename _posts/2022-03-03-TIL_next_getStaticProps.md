@@ -14,22 +14,22 @@ categories: TIL Next.js
 - 하지만 데이터를 가져와야 하는 경우 `getStaticProps`, `getStaticPaths`를 사용해야 한다.
 - 나의 경우 코드 리펙터링을 할 때 데이터를 가져와야 했으므로 `getStaticProps`나 `getStaticPaths` 둘 중에서 하나를 사용해야 했는데 `getStaticProps`를 사용했다.
 
-# `getStaticProps`와 `getStaticPaths`
+# getStaticProps와 getStaticPaths
 
-## `getStaticProps`
+## getStaticProps
 
 - 빌드 시 값이 고정되어 빌드 이후에는 수정이 불가능하다.
 
-## `getStaticPaths`
+## getStaticPaths
 
 - 동적 라우팅과 getStaticProps를 동시에 원할 때 사용한다.
 
-# `getStaticProps` 사용하기
+# getStaticProps 사용하기
 
 - 리펙터링을 하는 부분 안에서 따로 라우팅을 다시 사용하는 일이 없어서 `getStaticProps`를 사용했다.
 - 먼저 기존에는 API 값을 아래와 같이 가져왔었다.
 
-```TypeScript
+```
 import { get } from 'apis/requestAPIs/contacts';
 const Contacts = () => {
 
@@ -59,7 +59,7 @@ export default Contacts
 
 - `getStaticProps`를 사용하기 위해서 공식 문서에 있는 것처럼 최하단에 다음과 같이 추가한다.
 
-```TypeScript
+```
 export async function getStaticProps() {
 
     const contactType = await get.ContactType();
@@ -78,7 +78,7 @@ export async function getStaticProps() {
 
 - `getStaticProps`에서 props로 반환을 했을 때 그 값들을 바로 컴포넌트에서 불러올 수 있다.
 
-```TypeScript
+```
 const Contacts = ({ contactType, qaPurchase, qaSale }: ContactsAPIType) => {
 }
 ```
