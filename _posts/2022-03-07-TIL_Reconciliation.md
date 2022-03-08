@@ -110,5 +110,5 @@ array.map( x => {
 
 # Reference
 
-https://ko.reactjs.org/docs/reconciliation.html
-https://meetup.toast.com/posts/134
+- https://ko.reactjs.org/docs/reconciliation.html
+- https://meetup.toast.com/posts/134
