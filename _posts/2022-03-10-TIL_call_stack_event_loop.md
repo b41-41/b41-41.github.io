@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "호출 스택과 이벤트 루프, Flux 패턴"
+title: "호출 스택과 이벤트 루프"
 categories: TIL JavaScript
 ---
 
