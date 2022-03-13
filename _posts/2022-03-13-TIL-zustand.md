@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Zustand - 상태관리 라이브러리"
-categories: TIL CS
+categories: TIL Zustand
 ---
 
 # Zusatand란?
@@ -39,7 +39,7 @@ categories: TIL CS
     ```
 
 - 이렇게 `store`를 하나 만든 다음에 그 안에 실행될 것들을 지정해 주고
-- 값을 가져올 때는 useStore에서 바로 가져다가 쓰면 됨.
+- 값을 가져올 때는 `useStore`에서 바로 가져다가 쓰면 됨.
 
 # 장점
 
