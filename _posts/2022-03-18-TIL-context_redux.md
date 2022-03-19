@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "Redux와 React Context API의 차이"
-categories: TIL Style-Components Style
-tag: lint
+categories: TIL ContextAPI Redux
 ---
 
 # 들어가기
