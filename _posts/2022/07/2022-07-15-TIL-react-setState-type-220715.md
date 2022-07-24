@@ -53,7 +53,7 @@ const parentComponent = () => {
 
 ```
 //자식 컴포넌트
-import React, {useState} from 'react';
+import React from 'react';
 
 interface Props {
     setStateValue: React.Dispatch<React.SetStateAction<string>>;
