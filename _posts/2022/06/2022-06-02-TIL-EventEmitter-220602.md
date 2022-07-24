@@ -11,7 +11,8 @@ categories: TIL Node.js
 ### 자세하게 다시 정리
 
 - JavaScript를 브라우저에서 사용할 때 DOM 이벤트를 받는 `이벤트 리스너`의 사용 방법은 다음과 같다.
-```JavaScript
+
+```
 const button = document.querySelector("button");
 
 button.addEventListener("click", (event) => {
@@ -21,7 +22,7 @@ button.addEventListener("click", (event) => {
 
 - 그런데 DOM 이벤트가 아니고 다른 행위(트리거)를 기반으로 이벤트를 내보내고 응답하도록 할 때 custom event emitter가 필요하다.
 
-```JavaScript
+```
 let n = 0;
 const event = new EventEmitter();
 
