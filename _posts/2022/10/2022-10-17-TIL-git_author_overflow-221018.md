@@ -20,7 +20,7 @@ categories: TIL Git CSS
 - git rebase -i를 사용!
 
 ```
-git rebase -i @#$@#$@#$@#$@#$@#$@#해쉬넘버@#$@#$@#$@#$
+$git rebase -i @#$@#$@#$@#$@#$@#$@#해쉬넘버@#$@#$@#$@#$
 ```
 
 - VIM 편집창이 나오면 원하는 commit의 해쉬 번호 앞쪽에 `pick`이라고 적혀 있는 부분을 `e`로 바꾼 후
@@ -28,20 +28,20 @@ git rebase -i @#$@#$@#$@#$@#$@#$@#해쉬넘버@#$@#$@#$@#$
 - 작성자를 변경한다. (git commit --amend --author"유저아이디 <이메일>")
 
 ```
-git commit --amend --author"b41-41 <b41-41@41.kr>"
+$git commit --amend --author"b41-41 <b41-41@41.kr>"
 ```
 
 - 다시 VIM 편집창이 나오는데 변경 내용이 맞으면 저장, 닫는다 (esc -> :wq)
 - rebase를 종료!
 
 ```
-git rebase --continue
+$git rebase --continue
 ```
 
 - push (기존 커밋을 바꾸기 때문에 force 옵션을 줬다.)
 
 ```
-git push blabla -f 
+$git push blabla -f 
 ```
 
 
