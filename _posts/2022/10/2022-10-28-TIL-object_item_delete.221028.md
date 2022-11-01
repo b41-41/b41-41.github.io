@@ -64,9 +64,12 @@ return one;
 - 객체의 경우
 
 ```
-const obj = {name: 'bin', age: 20};
+const obj = {name: 'bin', age: 20, gender: 'm'};
 
-const {name}
+const {name, ...obj2} =  obj;
+
+return obj2;
+// return value is {age: 20, gender: 'm'}
 
 ```
 
