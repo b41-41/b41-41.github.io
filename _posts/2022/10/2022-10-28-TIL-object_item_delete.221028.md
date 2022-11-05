@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Object에 특정 항목 삭제하기 (+destructuring)"
-categories: TIL JavsScript
+categories: TIL JavaScript
 ---
 
 # 문제
