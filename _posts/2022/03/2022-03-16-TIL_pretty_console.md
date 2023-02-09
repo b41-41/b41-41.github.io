@@ -10,8 +10,8 @@ categories: TIL JavaScript
 - 가끔은 어떻게 만들었는지 궁금할 때도 있다.
 - 그럴 때 하는 것이 `opt + shift + i`!
 - 그런데 가끔은 정말 특이한 콘솔을 볼 때가 있다.
-  ![티스토리 콘솔창](../assets/img/post/20220316/story.png)
-  ![티스토리 콘솔창](../assets/img/post/20220316/port.png)
+  ![티스토리 콘솔창](../../assets/img/post/20220316/story.png)
+  ![티스토리 콘솔창](../../assets/img/post/20220316/port.png)
 - 위 처럼 이쁜 콘솔 로그를 사용해 들어오는 개발자에게 인사를 남길 수 있다.
 - 어떻게 하는 지 궁금해서 방법을 찾아 보았다.
 
@@ -26,7 +26,7 @@ categories: TIL JavaScript
 
 - 그럼 이렇게 출력된다.
 
-![예시](../assets/img/post/20220316/example.png)
+![예시](../../assets/img/post/20220316/example.png)
 
 # Reference
 
