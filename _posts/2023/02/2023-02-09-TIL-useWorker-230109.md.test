@@ -1,0 +1,57 @@
+---
+layout: post
+title: "useWorker() - React 밖에서 따로 코드를 실행"
+categories: TIL JavaScript React
+---
+
+## Web Woker
+
+    - Web Worker는 브라우저에서 JavaScript 코드를 별도의 스레드에서 실행할 수 있도록 해주는 기술. [mdn using web wokers Link](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
+
+## useWorker
+
+    - https://github.com/alewin/useWorker
+    - Web Worker를 쉽게 사용할 수 있게 만든 Hook
+      ```
+      $npm install --save @koale/useworker
+      ```
+
+### 장점
+        - 메인 스레드와 별도의 스레드에서 코드를 실행할 수 있게 됨 (마치 멀티 스레드처럼)
+        - React 생명주기와 상관없이 외부 코드를 실행시킬 수 있으므로 더 다양한 코딩이 가능.
+        - 계산, 데이터 처리 같은 작업을 병렬적으로 실행시킬 수도 있음. (애플리케이션의 속도 향상도 가능하다.)
+### 단점
+        - 잘못 사용하면 오히려 이상한 코드가 될 수도 있음. (너무 많이 사용해서 React의 장점을 살리지 못한다던지...)
+
+### 예시
+
+```
+import React from "react";
+import { useWorker } from "@koale/useworker";
+
+const numbers = [...Array(5000000)].map(e => ~~(Math.random() * 1000000));
+const sortNumbers = nums => nums.sort();
+
+const Example = () => {
+  const [sortWorker] = useWorker(sortNumbers);
+
+  const runSort = async () => {
+    const result = await sortWorker(numbers); // non-blocking UI
+    console.log(result);
+  };
+
+  return (
+    <button type="button" onClick={runSort}>
+      Run Sort
+    </button>
+  );
+};
+```
+    
+- useWorker 함수를 호출할 때, `sortNumbers` 함수를 전달하여 `sortWorker`라는 이름의 Worker를 생성
+- 버튼을 클릭했을 때 `runSort` 함수를 실행해서 sort 계산을 외부로 돌리는 예제
+
+
+## Reference
+- [mdn web docs, Using Web Workers, hhttps://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers, 2023.1.13](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [alewin/useWorker github, https://github.com/alewin/useWorker, 2023.2.9 Access](https://github.com/alewin/useWorker)
