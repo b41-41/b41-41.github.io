@@ -1,6 +1,6 @@
 <div align="center">
 
-# TIL 블로그
+# Today I Learn
 - yeah!
 
 </div>
