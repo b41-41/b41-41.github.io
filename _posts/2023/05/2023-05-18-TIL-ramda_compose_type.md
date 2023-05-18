@@ -6,9 +6,9 @@ categories: TIL TypeScript Ramda.js
 
 ## Type of R.compose
 
-    - Type declaration is Union type.
-    - The first is the input value (argument).
-    - From the second, specify the type in the order of function 1 and function 2 (function 1, 2 is return type)
+- Type declaration is Union type.
+- The first is the input value (argument).
+- From the second, specify the type in the order of function 1 and function 2 (function 1, 2 is return type)
 
 ## example
 
