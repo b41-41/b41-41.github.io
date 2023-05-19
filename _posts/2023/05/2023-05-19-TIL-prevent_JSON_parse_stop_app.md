@@ -18,7 +18,7 @@ const parseJSON = (str) => {
     try {
         return JSON.parse(str);
     } catch {
-        console.error(str is not JSON);
+        console.error("str is not JSON::", str);
         return ''; //return empty string;
     }
 }
